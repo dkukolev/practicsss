@@ -1,0 +1,255 @@
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Alice';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/alice-v20-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+@font-face {
+    font-family: 'MisterBrush';
+    src: url('fonts/MisterBrush.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #3f3f3f;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header{
+    background-color: rgb(58, 58, 58);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Alice';
+    font-size: clamp(40px,3vw,70px);
+    padding: 10px 0 10px 0;
+    box-shadow: 0 0 5px black;
+    text-shadow: 0 0 3px black;
+}
+
+.byy{
+    font-size: clamp(20px,1.5vw,50px);
+}
+
+.back_1{
+    width: 300px;
+    background-color: rgb(43, 43, 43);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 4px 4px rgb(78, 78, 78);
+}
+
+main{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.num{
+    color: white;
+    font-family: 'Alice';
+    font-size: clamp(40px,3vw,70px);
+    position: relative;
+    top: clamp(30px,1.6vw,10px);
+}
+
+.info{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    color: white;
+    text-shadow: 0 0 3px black;
+    font-size: clamp(17px,1vw,27px);
+}
+
+.out{
+    color: white;
+    font-family: 'Alice';
+    font-size: clamp(20px,1vw,40px);    
+}
+
+.out3, .out4, .out5, .out7, .out8, .out10, .out12, .out11, .out66{
+    color: white;
+    font-family: 'Arial';
+    font-size: clamp(15px,1vw,40px);
+    padding-top: 10px;    
+}
+
+.out6{
+    color: green;
+    font-size: 50px;
+    width: 1200px;    
+    position: absolute;
+    top: 0;
+}
+
+.pole{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pole2{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-bottom: 10px;
+}
+
+.bloccc{
+    display: flex;
+    gap: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#two{
+    width: 100px;
+}
+
+.line{
+    margin-top: 10px;
+    width: 250px;
+    background-color: grey;
+}
+
+.otpr_6,.otpr_7{
+    width: 200px;
+}
+
+.otpr_11,.otpr_12{
+    width: 50px;
+}
+
+.block_2{
+    margin: 0 auto;
+}
+
+.block_1{
+    color: white;
+    font-family: 'Arial';
+}
+
+.FDS{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100px;
+    height: 30px;
+}
+
+.FDS button{
+    width: 70px;
+}
+
+.bb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#info1, #info2{
+    margin-top: 10px;
+}
+
+#sdsd{
+    text-align: center;
+}
+
+#limd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#button{
+    margin-top: 20px;
+}
+
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+  }
+  
+  .preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+  }
+  
+  .preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #337ab7;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+  }
+  
+  .preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+  }
+  
+  @keyframes preloader-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes preloader-bounce {
+  
+    0%,
+    100% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  .loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+  
+  .loaded .preloader {
+    display: none;
+  }

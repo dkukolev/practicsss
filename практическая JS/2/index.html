@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическая по JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p>
+            <span class="jss">Практическая 2</span> 
+        </p>
+    </header>
+
+    <main>
+        <div class="block_1">
+            <p class="num">1</p>
+            <div class="back_1">
+                <p class="info">
+                    Привет!
+                </p>
+
+                    <button class="otpr_2">Отправить</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="block_1">
+            <p class="num">2</p>
+            <div class="back_1">
+                
+                <p class="info">
+                    Ваше имя: 
+                </p>
+
+                <div class="pole">
+                    <input type="text" id="five" placeholder="Name:">
+                    <button onclick="Click2();">Отправить</button>
+                </div>
+                <div class="out5"></div>
+            </div>
+        </div>
+
+        <div class="block_1">
+            <p class="num">3-5</p>
+            <div class="back_1">
+                <p class="info">
+                    В консоли
+                </p>
+
+            </div>
+        </div>
+
+        <div class="block_3">
+            <p class="num">Калькулятор</p>
+            <form id="calculatorForm">
+                <div class="vvodss">
+                     <input type="text" id="num1" placeholder="Введите число 1">
+                     <input type="text" id="num2" placeholder="Введите число 2">
+                </div>
+             
+                <div class="blopsss">
+                     <button onclick="add()" type="button">+</button>
+                     <button onclick="subtract()" type="button">-</button>
+                     <button onclick="multiply()" type="button">*</button>
+                     <button onclick="divide()" type="button">/</button>
+                </div>
+                <div class="sjsj">
+                     <input type="text" id="result" readonly>    
+                </div>
+             
+             </form>
+        </div>
+        
+        <!-- <div class="block_1">
+            <p class="num">#4</p>
+            <div class="back_1">
+
+                <p class="info">
+                    Введи 3 цифры
+                </p>
+                    <button class="otpr_7">Погнали!</button>
+                <div class="out7"></div>
+            </div>
+        </div> -->
+
+        <!-- <div class="block_1">
+            <p class="num">#5</p>
+            <div class="back_1">
+
+                <p class="info" style="text-align: center;">
+                    Введи число от 0 до 15 <br>
+                    и узнаешь, четное оно<br>
+                    или нет
+                </p>
+
+                <div class="pole">
+                    <input type="text" id="semmm" placeholder="Введите число">
+                    <button class="otpr_8">Отправить</button>
+                </div>
+                <div class="out8"></div>
+            </div>
+        </div> -->
+
+        <!-- <div class="block_1">
+            <p class="num">#6</p>
+            <div class="back_1">
+
+                <p class="info">
+                    Введи число больше 5
+                </p>
+
+                <div class="pole">
+                    <button class="otpr_9">Отправить</button>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="block_1">
+            <p class="num">#7</p>
+            <div class="back_1">
+
+                <p class="info">
+                    Четные числа от 8 до 20
+                </p>
+
+                <button class="otpr_10">Запустить</button>
+
+                <div class="out10"></div>
+            </div>
+        </div> -->
+
+        <!-- <div class="block_1">
+            <p class="num">#8</p>
+            <div class="back_1">
+
+                <p class="info">
+                    Выбирите чему будет кратна сумма:
+                </p>
+
+                <div class="pole2">
+                   
+                    <button class="otpr_11">5</button>
+                    <button class="otpr_12">3</button>   
+
+                </div>                    
+                <div class="out11"></div>
+                <div class="out12"></div>
+            </div>
+        </div> -->
+    </main>
+
+    
+
+    <script src="js/num1.js"></script>
+    <script src="js/num2.js"></script>
+    <script src="js/num3.js"></script>
+    <script src="js/num4.js"></script>
+    <!-- <script src="js/num5.js"></script> -->
+    <!-- <script src="js/num6.js"></script> -->
+    <!-- <script src="js/num7.js"></script> -->
+    <!-- <script src="js/num8.js"></script> -->
+    <!-- <script src="js/num9.js"></script> -->
+    <!-- <script src="js/num10.js"></script> -->
+    <script>
+        e.preventDefault();
+        function add() {
+          var num1 = parseFloat(document.getElementById("num1").value) || 0;
+          var num2 = parseFloat(document.getElementById("num2").value) || 0;
+          document.getElementById("result").value = num1 + num2;
+        }
+      
+        function subtract() {
+          var num1 = parseFloat(document.getElementById("num1").value) || 0;
+          var num2 = parseFloat(document.getElementById("num2").value) || 0;
+          document.getElementById("result").value = num1 - num2;
+        }
+      
+        function multiply() {
+          var num1 = parseFloat(document.getElementById("num1").value) || 0;
+          var num2 = parseFloat(document.getElementById("num2").value) || 0;
+          document.getElementById("result").value = num1 * num2;
+        }
+      
+        function divide() {
+          var num1 = parseFloat(document.getElementById("num1").value) || 0;
+          var num2 = parseFloat(document.getElementById("num2").value) || 0;
+          document.getElementById("result").value = num1 / num2;
+        }
+      </script>
+</body>
+</html>
+
+
+
+

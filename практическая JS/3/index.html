@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабороторная по JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p>
+            <span class="jss">Практическая 3</span> 
+        </p>
+    </header>
+
+    <main>
+        <div class="block_1">
+            <p class="num"></p>
+            <div class="back_1">
+                <p class="info">
+                    В консоли
+                </p>
+            </div>
+        </div>
+
+<script>
+// 1) 
+console.log("#1");
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = Array.of(6, 7, 8, 9, 10);
+const arr3 = new Array(11, 12, 13, 14, 15);
+
+// 2) 
+console.log("#2");
+console.log(arr1[4]); 
+arr1[4] = 25;
+console.log(arr1[4]); 
+
+// 3) 
+console.log("#3");
+console.log(arr2.length); 
+
+// 4) 
+console.log("#4");
+console.log(arr3); 
+arr3.forEach(element => console.log(element)); 
+
+// 5) 
+console.log("#5");
+const arr4 = [...arr2, ...arr3]; 
+console.log(arr4); 
+
+// 6) 
+console.log("#6");
+const lastElement = arr4.pop(); 
+console.log(lastElement); 
+
+// 7) 
+console.log("#7");
+const lastElement2 = arr4.pop(); 
+console.log(lastElement2); 
+
+// 8) 
+console.log("#8");
+arr4.unshift(0); 
+console.log(arr4);
+
+// 9)
+console.log("#9"); 
+const inputArray = [25, 100, "Hello", "", 64];
+const squareRootArray = inputArray.map(element => {
+    if (typeof element === 'number' && element > 0) {
+        return Math.sqrt(element);
+    } else {
+        return "Invalid Input";
+    }
+});
+console.log(squareRootArray)
+
+//10
+console.log("#10"); 
+let today = new Date();
+let options = { year: 'numeric', month: 'long', day: 'numeric'};
+let formattedDate = today.toLocaleDateString("ru-RU", options);
+console.log(formattedDate);
+
+
+//11
+console.log("#11"); 
+function multiplyRandomNumbers() {
+  let randomNum1 = Math.floor(Math.random() * 51);
+  let randomNum2 = Math.floor(Math.random() * 51);
+  let product = randomNum1 * randomNum2;
+  return product;
+}
+
+console.log(multiplyRandomNumbers());
+
+</script>
+</body>
+</html>
+
+
+
+
